@@ -1,21 +1,45 @@
-//imports (para el servidor) 
-const express = require ('express');
+//imports 
+
+const path = require('path');
+const express = require('express');
 const app = express();
 
-//Configuarcion del Puerto 
+var exec = require('child_process').exec;
+
+
+/*exec('ls', function(err, stdout, stderr) {
+    console.log(stdout);
+});
+exec('touch holamundo.txt', function(err, stdout, stderr) {
+    console.log(stdout);
+});
+exec('ls', function(err, stdout, stderr) {
+    console.log(stdout);
+});*/
+
+
+
+//configuración 
+app.set('view engine', 'ejs');
 app.set('port', 3000);
+app.set('views', path.join(__dirname, 'views'));
+
+//app.use(express.static(path.join(__dirname, "public")));
+   
 
 //rutas
-app.get('/',(req,res) => {
-res.send('<h1> Que pedo Erikkson</h1>')
-})
+app.use(require('./routes/indexRoutes'));
 
-app.get('/Hola',(req,res) => {
-    res.send('<h1> Prueba N1</h1>')
-    })
-    
+//middleware
+app.use(express.static(path.join(__dirname, '/public')));
 
-//Para escuchar el Puerto 
-app.listen(app.get('port'),()=>{
-    console.log('escuchando en el puerto ',app.get('port') );
+
+
+//escucha
+
+app.listen(app.get('port'), () => {
+
+    console.log('escuchando en el puerto ', app.get('port'));
 });
+
+console.log(path.join(__dirname, '/views'));

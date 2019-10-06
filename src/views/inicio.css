@@ -1,0 +1,85 @@
+
+h1{
+    margin-left: 30%;
+    width: 1000;
+    font-size: 45px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: rgb(245, 245, 248);
+
+}
+body{
+    background-color: rgb(55, 0, 100) 
+}
+p{
+    font-size: 20px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: greenyellow;
+}
+li{
+    font-size: 20px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: rgb(245, 245, 248) 
+}
+h2{
+    font-size: 20px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: #a50e0e;
+    
+}
+h3{
+    font-size: 25px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: greenyellow;
+}
+h4{
+    font-size: 25px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: greenyellow;
+}
+h5{
+    font-size: 25px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: gold;
+}
+h6{
+    font-size: 20px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: greenyellow;
+}
+    
+.contenedor{
+    width: 146;
+    display: block;
+    margin: auto;
+    border: 1px solid #f5eeee;
+}
+.ingresar2{
+    width: 80;
+    display: block;
+    margin: auto;
+    border: 1px solid #a50e0e;
+}
+
+.contenedorleft{
+    margin-left: 70%;   
+    font-size: 25px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: chartreuse;
+}
+
+.contenedorleft2{
+    margin-left: 30%;   
+    font-size: 25px;
+    font-family: 'Arial', Times, serif;
+    font-weight: bold;
+    color: chartreuse;
+}
