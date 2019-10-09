@@ -1,6 +1,5 @@
 //imports para el servidor
 
-
 const express = require ('express');
 //const app = express();
 
@@ -36,16 +35,12 @@ router.get('/users', (req, res) => {
 
     setTimeout(() => {
         res.status(400).json({
-            usuario: 'daniel',
-            id: '4',
-            carne: '202'
+            usuario: '',
+            id: '',
+            carne: ''
         });
-    }, 3000);
+    }, );
 
-    /*
-        setTimeout(() => {
-            res.status(200).json({ usuario: 'oliver sierra' });
-        }, 3500);*/
 }); 
 
 router.get('/', (req, res) => {

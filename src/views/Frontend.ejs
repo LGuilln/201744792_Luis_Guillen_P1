@@ -4,44 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="inicio.css">
     <title>Cargar Archivo</title>
     <% include separacion/head.html%>
   
 </head>
 <body>
     <% include separacion/nav1.html%>
-        
+
     <div class="contenedor">
         <header>
         <h1>Seleccion de Documento TXT</h1>
         </header>
         <section>
-            
-            <article >
-                <article class="contenedorleft"> 
-                    <div class="contenedorleft2">
-                            <p>Indique cual es el documento que debe ser llevado al Analizador de Lenguajes</p>
-                          
-             <auxiliar id="pantalla" width="960px" height="450px"> 
-                    </auxiliar>
-                   
-                     <button onclick="revisar()" type="button">Enviar</button>
-        </section>
-    </div>
-    <footer class="contenedorleft">
+
+            <div id="unico2">
+            <!--Para cargar el Archivo-->       
+            <form action="/mo" method="POST" id="formulario"  enctype="multipart/form-data">
+            <input type="file" id="fileinput" (change)="onFileChange($event)"/>
+            <h3>Contenido del archivo:</h3>
+            <pre id="contenido-archivo1"></pre>
+            <textarea name="archivotxt" id="archivotxt" cols="60" rows="20" disabled="true">
+  
+            </textarea><br>
+           
+            <!--Para establecer comunicacion con el Server --> 
+            <input type="button" name="bote" id="getButton" value="Enviar" style="display:none"/><br>
       
-      <div class="contenedorleft2">
-              <li>By: Luis Eduardo Guillen Ruiz</li>
-      </div>
-   
-      <div class="contenedorleft2">
-          <ul>
-              <div id="GIT"></div>
-               <li>Manejador Github_</li>
-               
-          </ul>
-      </div>
-</body>
-</html>
+                    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                    <script src="./Frontend.js"></script>
+                    <script src="./FrontendSend.js"></script>
+                    <script src="js/jquery.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+    
+            </div>
+  
 </body>
 </html>

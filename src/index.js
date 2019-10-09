@@ -6,19 +6,6 @@ const app = express();
 
 var exec = require('child_process').exec;
 
-
-/*exec('ls', function(err, stdout, stderr) {
-    console.log(stdout);
-});
-exec('touch holamundo.txt', function(err, stdout, stderr) {
-    console.log(stdout);
-});
-exec('ls', function(err, stdout, stderr) {
-    console.log(stdout);
-});*/
-
-
-
 //configuración 
 app.set('view engine', 'ejs');
 app.set('port', 3000);
@@ -26,13 +13,12 @@ app.set('views', path.join(__dirname, 'views'));
 
 //app.use(express.static(path.join(__dirname, "public")));
    
-
 //rutas
 app.use(require('./routes/indexRoutes'));
 
 //middleware
 app.use(express.static(path.join(__dirname, '/public')));
-
+app.use( express.static( "public" ) );
 
 
 //escucha
