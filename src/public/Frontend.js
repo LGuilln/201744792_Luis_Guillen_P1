@@ -18,6 +18,7 @@ function mostrarContenido(contenido) {
   var elemento = document.getElementById('archivotxt');
   elemento.innerHTML =contenido;
   document.getElementById('getButton').style.display = 'inline';
+  document.getElementById('postButton').style.display = 'inline';
 }
 
 //visualizar

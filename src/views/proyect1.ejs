@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="proyect1.css">
+<head>
+
+
+       <% include bloque1/head.html%>
+</head>
+<body>
+    
+    <% include bloque1/nav.html%>
+
+    <header>
+        <h1>---------------"Analizador Léxico FEROVA"---------------</h1>
+</header>
+
+    <section>
+        <article>
+            <h2>
+                <b>
+                    <i>
+                            Debe ingresar un texto:
+                    </i>
+                        
+                </b>
+               </h2>
+           </article>
+
+    <article >
+           <div id="unico">
+                <p>Ingresar Texto:</p>
+   
+           </div>
+           <!-- Aca va mi boton con su cadena -->
+           <div id="unico2">
+                <input type="text" id="cadena" ></input>  
+                <button onclick="revisar()" type="button">Ingresar</button>
+        </div>
+              
+    </article>
+    <!-- Aca esta mi titulo de mi historial o listado -->
+    <article class="contenedor">
+            <p>Historial ó Listado:</p>
+            <ul>
+                <div id="listado"></div>
+            </ul>
+    </article>
+    
+    <div id="unico2">
+            <form action="/mo" method="GET" enctype="multipart/form-data">
+                <!-- <input type="file" name="fichero" value="Selecionar" id="unico2" class="btn" required /><br> -->
+                </form>
+              
+                <form action="/analizador" method="GET" id="formulario"  enctype="multipart/form-data">
+                <input type="file" id="cadena" />
+                <p> Contenido del archivo: </p>
+                <pre id="unico2"></pre>
+          
+                <% console.log("Estamos en Analizador"); 
+                    
+                %>
+                <script src="./proyect1.js"></script>
+
+    </div>
+
+          
+          
+
+        <!--Aca esta mi imagen-->
+       <a href="#">
+            <img src="./FinesseGrande.png" alt="">
+                    </a>
+                    <!--Aca estaran mis referencias con sus respectivos links-->
+                            <div class="links">
+                                    <ol>
+                                            <p>
+                                                <i>
+                                                    "REFERENCIAS"
+                                            </i>
+                                                </p>
+                                           
+                                            <li><a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">CSS</a></li>
+                                            <li><a href="https://es.wikipedia.org/wiki/HTML5">HTML5</a></li>
+                                            <li><a href="https://es.wikipedia.org/wiki/JavaScript">JAVASCRIPT</a></li>
+                                        </ol>
+                            </div>
+    <footer class="contenedor">
+        <p> - Derechos de Autor -</p>
+        
+        
+    </footer>
+  
+
+      </section>
+
+</body>
+</html>

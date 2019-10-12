@@ -22,17 +22,20 @@
             <div id="unico2">
             <!--Para cargar el Archivo-->       
             <form action="/mo" method="POST" id="formulario"  enctype="multipart/form-data">
-            <input type="file" id="fileinput" (change)="onFileChange($event)"/>
+            <input type="file" accept=".TXT" id="fileinput" (change)="onFileChange($event)"/>
             <h3>Contenido del archivo:</h3>
             <pre id="contenido-archivo1"></pre>
             <textarea name="archivotxt" id="archivotxt" cols="60" rows="20" disabled="true">
   
             </textarea><br>
-           
+
+            
             <!--Para establecer comunicacion con el Server --> 
             <input type="button" name="bote" id="getButton" value="Enviar" style="display:none"/><br>
       
+
                     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                    <script type="text/javascript" src="./leer.js"></script>
                     <script src="./Frontend.js"></script>
                     <script src="./FrontendSend.js"></script>
                     <script src="js/jquery.js"></script>
